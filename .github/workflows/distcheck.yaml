@@ -46,7 +46,7 @@ jobs:
     name: ${{matrix.amazonlinux}}/${{ matrix.sdk }}/efa@${{ matrix.efainstaller }}/makeinstall
     steps:
       # note, do not bump to v4: https://github.com/actions/checkout/issues/1590
-      - uses: actions/checkout@v4 
+      - uses: actions/checkout@v4
       - name: Fetch and Install EFA Installer Dependencies
         run: |
           curl -O https://efa-installer.amazonaws.com/aws-efa-installer-${{ matrix.efainstaller }}.tar.gz
