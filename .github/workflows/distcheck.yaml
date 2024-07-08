@@ -42,7 +42,7 @@ jobs:
             configmanager: yum-config-manager
             cudapackages: cuda-cudart-devel-12-3 cuda-driver-devel-12-3
 
-    runs-on: codebuild-ghactions-${{ matrix.amazonlinux }}-${{ github.run_id }}-${{ github.run_attempt }}
+    runs-on: codebuild-ghactions-${{ github.run_id }}-${{ github.run_attempt }}
     name: ${{matrix.amazonlinux}}/${{ matrix.sdk }}/efa@${{ matrix.efainstaller }}/makeinstall
     steps:
       # note, do not bump to v4: https://github.com/actions/checkout/issues/1590
