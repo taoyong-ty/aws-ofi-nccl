@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   greeting:
-    runs-on: codebuild-aws-ofi-nccl-${{ github.run_id }}-${{ github.run_attempt }}
+    runs-on: codebuild-ghactions-${{ github.run_id }}-${{ github.run_attempt }}
     permissions:
       issues: write
       pull-requests: write
