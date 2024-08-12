@@ -4,7 +4,7 @@ on: [push, workflow_call]
 
 jobs:
   greeting:
-    runs-on: codebuild-ghactions-${{ github.run_id }}-${{ github.run_attempt }}
+    runs-on: codebuild-ghactions-${{ github.run_id }}-${{ github.run_attempt }}-with-buildspec
     permissions:
       issues: write
       pull-requests: write
